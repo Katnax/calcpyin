@@ -8,12 +8,11 @@ x = None
 y = None
 z = None
 
-x = input()
-
-"""while isinstance(x, int) != True or isinstance(x, float) != True:
+while isinstance(x, float) != True:
     x = input()
-    if isinstance(x, int) != True or isinstance(x, float) != True:
-        print("input first number")"""
+    print(type(x))
+    x = float(x)
+    print(type(x))
 
 
 print("input operator")
@@ -22,12 +21,9 @@ if operator not in '+-*/':
     print("please enter operator")
     sys.exit()
 
-y = input()
-
-while isinstance(y, int) != True or isinstance(y, float) != True:
+while isinstance(y, float) != True:
     y = input()
-    if isinstance(y, int) != True or isinstance(y, float) != True:
-        print("input second number")
+    y = float(y)
 
 match operator:
     case r"+":
