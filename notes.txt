@@ -1,0 +1,11 @@
+
+
+
+0.1 + 0.2
+
+convert float to 2 ints, figure out how to deal with dividing as it creates a float always. 
+if after the dot, it adds up to more than 1. then add to the first half, and vice versa, remove from first half, watch out for that. FUNCTION!
+
+input function. replaces "," to "." depending on the culture. Mabye this one converts floats to two ints? While checking if it's not int as input.
+
+
