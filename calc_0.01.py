@@ -1,20 +1,25 @@
-# import math
+#https://youtube.com/shorts/p-CO1tNyiTU
+
 import sys
 
 
-# pi = math.pi
-# first_number, second_number, result = None, None, None
-first_number = None
-second_number = None
-result = None
+first_number = second_number = result = None
 
-while isinstance(first_number, float) != True:
-    first_number = input()
-    print(type(first_number))
-    first_number = float(first_number)
-    print(type(first_number))
-    if isinstance(first_number, float) != True:
-        print("input correct number")
+#print("input first number")
+#while True:
+#    first_number = input()
+#    if not first_number.isdigit():
+#        print(type(first_number))
+#    else:
+#        print(type(first_number))
+#        first_number = float(first_number)
+#        print(type(first_number))
+#        break
+
+while not (first_number := input("input first number: \n")).isdigit():  #TODO figure out how to input floats
+    print("enter a valid number")
+
+first_number = float(first_number)
 
 print("input operator")
 operator = input()
@@ -22,6 +27,7 @@ if operator not in '+-*/':
     print("please enter operator")
     sys.exit()
 
+print("input second number")
 while isinstance(second_number, float) != True:
     second_number = input()
     second_number = float(second_number)
@@ -41,9 +47,8 @@ match operator:
         result = first_number / second_number
 
 if int(result) == result:
-    print(int(result))
-else:
-    print(result)
+    result = int(result)
+print("your result is:",result)
 
 
 
